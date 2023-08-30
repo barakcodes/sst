@@ -91,7 +91,8 @@ export interface BundlingOptions {
  * Produce bundled Lambda asset code
  */
 export function bundle(options: BundlingOptions & { out: string }) {
-  const { entry, runtime, architecture, outputPathSuffix, installCommands } = options;
+  const { entry, runtime, architecture, outputPathSuffix, installCommands } =
+    options;
 
   const stagedir = FileSystem.mkdtemp("python-bundling-");
   const hasDeps = stageDependencies(entry, stagedir);
@@ -121,7 +122,7 @@ export function bundle(options: BundlingOptions & { out: string }) {
       IMAGE:
         runtime.bundlingImage.image +
         // the default x86_64 doesn't need to be set explicitly
-        (architecture == "arm_64" ? ":latest-arm64" : "")
+        (architecture == "arm_64" ? ":latest-arm64" : ""),
     },
     file: dockerfile,
   });

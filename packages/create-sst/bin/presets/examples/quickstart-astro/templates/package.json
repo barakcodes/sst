@@ -12,8 +12,6 @@
     "sst:deploy": "sst deploy",
     "sst:dev": "sst dev"
   },
-  "dependencies": {
-  },
-  "devDependencies": {
-  }
+  "dependencies": {},
+  "devDependencies": {}
 }

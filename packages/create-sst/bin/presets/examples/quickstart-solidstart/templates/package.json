@@ -8,10 +8,8 @@
     "sst:dev": "sst dev"
   },
   "type": "module",
-  "devDependencies": {
-  },
-  "dependencies": {
-  },
+  "devDependencies": {},
+  "dependencies": {},
   "engines": {
     "node": ">=16.8"
   }

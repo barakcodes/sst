@@ -9,7 +9,7 @@ SST gives you the flexibility to configure your projects in many different ways.
 
 We have a <a href={`${config.github}/tree/master/examples/typescript-monorepo`}>starter repo</a> that we are using for reference. You can install it by running:
 
-``` bash
+```bash
 yarn create serverless-stack --use-yarn --example typescript-monorepo
 ```
 
@@ -94,6 +94,6 @@ We provide a scripts folder to create these scripts - they can import code direc
 
 We take advantage of `esbuild-runner` to execute the TypeScript code directly. You can use the included yarn script to run a script like:
 
-``` bash
+```bash
 yarn script ./scripts/example.ts
 ```

@@ -7,9 +7,9 @@ export function postPayload(endpoint: string, body: any) {
         .request(
           endpoint,
           {
-            method: 'POST',
-            headers: { 'content-type': 'application/json' },
-            timeout: 5000
+            method: "POST",
+            headers: { "content-type": "application/json" },
+            timeout: 5000,
           },
           (resp) => {
             if (resp.statusCode !== 200) {
@@ -19,7 +19,7 @@ export function postPayload(endpoint: string, body: any) {
             resolve();
           }
         )
-        .on('error', () => {
+        .on("error", () => {
           // catches connect ECONNREFUSED while the below catch does not work as expected
         });
       req.write(JSON.stringify(body));

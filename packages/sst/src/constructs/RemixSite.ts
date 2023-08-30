@@ -73,6 +73,15 @@ export class RemixSite extends SsrSite {
       serverBuildOutputFile: "build/index.js",
       clientBuildOutputDir: "public",
       clientBuildVersionedSubDir: "build",
+      // Special characters tha require us to encode them
+      serverCFFunctionInjection: `
+      var specialChars = [ "$", "@", "+"];
+      if (specialChars.some((char) => request.uri.includes(char))) {
+        request.uri = request.uri
+          .replace(/\$/g, "%24")
+          .replace(/@/g, "%40")
+          .replace(/\+/g, '%2B');
+      }`,
     };
   }
 

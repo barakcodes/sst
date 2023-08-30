@@ -1,6 +1,6 @@
-import {CgLink} from "react-icons/cg";
-import {Link, useNavigate} from "react-router-dom";
-import {useTypedMutation} from "@create-sst-rds/graphql/urql";
+import { CgLink } from "react-icons/cg";
+import { Link, useNavigate } from "react-router-dom";
+import { useTypedMutation } from "@create-sst-rds/graphql/urql";
 import Button from "./Button";
 import styles from "./Navbar.module.css";
 

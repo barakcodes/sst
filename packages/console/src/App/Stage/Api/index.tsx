@@ -227,7 +227,9 @@ export function Explorer() {
       for (const item of data.query) {
         if (item.name && item.value) searchParams.append(item.name, item.value);
       }
-      const proxy = false ? `https://local.serverless-stack.com:12557/proxy/` : "";
+      const proxy = false
+        ? `https://local.serverless-stack.com:12557/proxy/`
+        : "";
       const query = searchParams.toString();
       const result = await fetch(
         `${proxy}${selected.data.url}${processedPath}${
@@ -345,11 +347,14 @@ export function Explorer() {
             {form.watch("route") && (
               <Request>
                 <FormProvider {...form}>
-                  <form onSubmit={onSubmit} onKeyDown={(e) => {
-                    if (e.metaKey && e.key === "Enter") {
-                      onSubmit()
-                    }
-                  }}>
+                  <form
+                    onSubmit={onSubmit}
+                    onKeyDown={(e) => {
+                      if (e.metaKey && e.key === "Enter") {
+                        onSubmit();
+                      }
+                    }}
+                  >
                     <RequestTabs>
                       {form.watch("path").length > 0 && (
                         <RequestTabsItem replace to="url">

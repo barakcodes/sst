@@ -134,17 +134,19 @@ function StackItem(props: { stack: StackInfo }) {
           </Function>
         ));
       case "Topic":
-        return c.data.subscribers.filter(fn => fn).map((fn, index) => (
-          <Function key={c.addr + fn.node} to={`${fn.stack}/${fn.node}`}>
-            <Stack space="sm">
-              <FunctionName>{c.id}</FunctionName>
-              <FunctionVia>
-                Subscriber {c.data.subscriberNames?.[index] || "#" + index}
-              </FunctionVia>
-            </Stack>
-            <FunctionIcons stack={fn.stack} addr={fn.node} />
-          </Function>
-        ));
+        return c.data.subscribers
+          .filter((fn) => fn)
+          .map((fn, index) => (
+            <Function key={c.addr + fn.node} to={`${fn.stack}/${fn.node}`}>
+              <Stack space="sm">
+                <FunctionName>{c.id}</FunctionName>
+                <FunctionVia>
+                  Subscriber {c.data.subscriberNames?.[index] || "#" + index}
+                </FunctionVia>
+              </Stack>
+              <FunctionIcons stack={fn.stack} addr={fn.node} />
+            </Function>
+          ));
       case "Bucket":
         return c.data.notifications.filter(Boolean).map((n, index) => (
           <Function key={c.addr + n!.node} to={`${n!.stack}/${n!.node}`}>

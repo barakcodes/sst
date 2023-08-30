@@ -1,7 +1,6 @@
 name: Test
 
-on:
-  push
+on: push
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
@@ -49,8 +48,6 @@ jobs:
         run: pnpm build
         working-directory: packages/sst
 
-
       - name: Test
         run: pnpm test
         working-directory: packages/sst
-

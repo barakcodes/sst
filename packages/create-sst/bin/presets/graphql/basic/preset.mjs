@@ -12,8 +12,8 @@ export default [
   patch({
     file: "package.json",
     operations: [
-      {op: "add", path: "/overrides", value: {}},
-      {op: "add", path: "/overrides/graphql", value: "16.5.0"},
+      { op: "add", path: "/overrides", value: {} },
+      { op: "add", path: "/overrides/graphql", value: "16.5.0" },
     ],
   }),
   // Vanilla Extract doesn't support Vite 3 yet
@@ -68,7 +68,7 @@ export default [
   }),
   patch({
     file: "packages/web/package.json",
-    operations: [{op: "add", path: "/scripts/dev", value: "sst bind vite"}],
+    operations: [{ op: "add", path: "/scripts/dev", value: "sst bind vite" }],
   }),
   patch({
     file: "packages/web/package.json",

@@ -7,8 +7,8 @@ export default [
     path: "packages/core",
   }),
   install({
-    packages: ["@aws-sdk/types","@aws-sdk/smithy-client"],
+    packages: ["@aws-sdk/types", "@aws-sdk/smithy-client"],
     path: "packages/core",
-    dev: true
+    dev: true,
   }),
 ];

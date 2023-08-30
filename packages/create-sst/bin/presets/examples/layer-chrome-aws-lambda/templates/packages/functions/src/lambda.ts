@@ -6,7 +6,8 @@ import chromium from "@sparticuz/chromium";
 import { APIGatewayProxyHandlerV2 } from "aws-lambda";
 
 // This is the path to the local Chromium binary
-const YOUR_LOCAL_CHROMIUM_PATH = "/tmp/localChromium/chromium/mac-1165945/chrome-mac/Chromium.app/Contents/MacOS/Chromium";
+const YOUR_LOCAL_CHROMIUM_PATH =
+  "/tmp/localChromium/chromium/mac-1165945/chrome-mac/Chromium.app/Contents/MacOS/Chromium";
 
 export const handler: APIGatewayProxyHandlerV2 = async (event) => {
   // Get the url and dimensions from the query string

@@ -33,7 +33,7 @@ Or with Yarn 0.25+
 yarn create sst
 ```
 
-Or with PNPM 
+Or with PNPM
 
 ```bash
 pnpm create sst
@@ -60,7 +60,6 @@ npx create-sst@latest --template=other/go
 ### `<destination>`
 
 Specify a project name, instead of typing it into the interactive prompt.
-
 
 ```bash
 npx create-sst@latest my-sst-app

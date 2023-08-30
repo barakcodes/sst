@@ -10,7 +10,6 @@
     "sst:deploy": "sst deploy",
     "sst:dev": "sst dev"
   },
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "type": "module"
 }
