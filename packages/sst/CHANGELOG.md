@@ -1,5 +1,11 @@
 # @serverless-stack/cli2
 
+## 2.24.21
+
+### Patch Changes
+
+- [`ab4cf366b`](https://github.com/sst/sst/commit/ab4cf366bcf1f0635bcd5c2782800a3348e688b2) Thanks [@fwang](https://github.com/fwang)! - RemixSite: url encode special characters in asset urls
+
 ## 2.24.20
 
 ### Patch Changes
